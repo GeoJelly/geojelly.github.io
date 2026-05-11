@@ -437,35 +437,6 @@
         .stat-n em { color:var(--gold); font-style:normal; }
         .stat-l { font-size:.78rem; color:var(--gray-600); letter-spacing:.04em; white-space: nowrap; }
 
-        /* scroll indicator */
-        .scroll-indicator {
-            position:absolute;
-            bottom:2.5rem;
-            left:50%;
-            transform:translateX(-50%);
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            gap:.5rem;
-            opacity:0;
-            animation:fadeUp .8s forwards 1.5s;
-            z-index: 3;
-        }
-        .scroll-line {
-            width:1px;
-            height:55px;
-            background:linear-gradient(to bottom, var(--gold), transparent);
-            animation:scrollPulse 2.2s ease-in-out infinite;
-        }
-        .scroll-txt {
-            font-family: var(--font-en);
-            font-size:.58rem;
-            letter-spacing:.32em;
-            text-transform:uppercase;
-            color:var(--gray-600);
-            writing-mode:vertical-rl;
-        }
-
         /* ─────────────────────────────────
            MARQUEE STRIP
         ──────────────────────────────── */
@@ -910,17 +881,6 @@
                 font-size: .7rem;
             }
 
-            /* Scroll indicator — move down & smaller */
-            .scroll-indicator {
-                bottom: 1.2rem;
-            }
-            .scroll-line {
-                height: 36px;
-            }
-            .scroll-txt {
-                font-size: .52rem;
-                letter-spacing: .22em;
-            }
 
             /* ── EXPERTISE Grid Mobile ── */
             .exp-grid {
@@ -1105,15 +1065,6 @@
                 font-size: .82rem;
             }
 
-            .scroll-indicator {
-                bottom: .8rem;
-            }
-            .scroll-line {
-                height: 28px;
-            }
-            .scroll-txt {
-                font-size: .46rem;
-            }
         }
 
         /* ── ≤400px: Very Small Phones ── */
@@ -1249,12 +1200,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span class="scroll-txt">Scroll</span>
-        </div>
-    </section>
+   </section>
 
     <!-- ── MARQUEE ── -->
     <div class="marquee-wrap">
