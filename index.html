@@ -58,7 +58,8 @@
         /* ─── CURSOR ─── */
         .cursor {
             position: fixed;
-            width: 10px; height: 10px;
+            width: 10px;
+            height: 10px;
             background: var(--gold);
             border-radius: 50%;
             pointer-events: none;
@@ -69,7 +70,8 @@
         }
         .cursor-ring {
             position: fixed;
-            width: 38px; height: 38px;
+            width: 38px;
+            height: 38px;
             border: 1px solid rgba(197,160,89,.55);
             border-radius: 50%;
             pointer-events: none;
@@ -78,7 +80,8 @@
             transition: border-color .3s, background .3s;
         }
         .cursor-ring.expand {
-            width: 56px; height: 56px;
+            width: 56px;
+            height: 56px;
             border-color: var(--gold);
             background: rgba(197,160,89,.06);
             transition: width .25s var(--ease), height .25s var(--ease), border-color .3s, background .3s;
@@ -86,7 +89,10 @@
 
         /* ─── NAV ─── */
         nav {
-            position: fixed; top:0; left:0; right:0;
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
             z-index: 1000;
             padding: 1.6rem 5%;
             display: flex;
@@ -103,7 +109,8 @@
         }
         .nav-logo {
             font-family: var(--font-en);
-            font-size: 1rem; font-weight: 800;
+            font-size: 1rem;
+            font-weight: 800;
             letter-spacing: .12em;
             color: var(--white);
             text-decoration: none;
@@ -112,15 +119,24 @@
         .nav-links { display:flex; gap:2.5rem; list-style:none; align-items:center; }
         .nav-links a {
             font-family: var(--font-en);
-            font-size: .72rem; font-weight: 500;
-            letter-spacing: .15em; text-transform: uppercase;
-            color: var(--gray-400); text-decoration:none;
-            transition: var(--tr); position:relative;
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            text-decoration:none;
+            transition: var(--tr);
+            position:relative;
         }
         .nav-links a::after {
-            content:''; position:absolute;
-            bottom:-4px; left:0; width:0; height:1px;
-            background: var(--gold); transition: var(--tr);
+            content:'';
+            position:absolute;
+            bottom:-4px;
+            left:0;
+            width:0;
+            height:1px;
+            background: var(--gold);
+            transition: var(--tr);
         }
         .nav-links a:hover, .nav-links a.active { color: var(--gold); }
         .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
@@ -131,27 +147,45 @@
             border-radius: 2px;
         }
         .nav-cta::after { display:none !important; }
-        .nav-cta:hover { background: var(--gold) !important; color: var(--obsidian) !important; border-color:var(--gold) !important; }
+        .nav-cta:hover { background: var(--gold) !important;
+            color: var(--obsidian) !important;
+            border-color:var(--gold) !important; }
 
         /* hamburger */
         .hamburger {
-            display:none; flex-direction:column; gap:5px;
-            cursor:pointer; background:none; border:none; padding:4px; z-index:1100;
+            display:none;
+            flex-direction:column;
+            gap:5px;
+            cursor:pointer;
+            background:none;
+            border:none;
+            padding:4px;
+            z-index:1100;
         }
         .hamburger span { display:block; width:24px; height:1px; background:var(--white); transition:var(--tr); }
         .hamburger.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
         .hamburger.open span:nth-child(2) { opacity:0; }
         .hamburger.open span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
         .mobile-menu {
-            display:none; position:fixed; inset:0;
-            background:rgba(8,8,8,.98); z-index:999;
-            flex-direction:column; align-items:center; justify-content:center; gap:2.2rem;
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(8,8,8,.98);
+            z-index:999;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            gap:2.2rem;
         }
         .mobile-menu.open { display:flex; }
         .mobile-menu a {
             font-family: var(--font-en);
-            font-size:1.4rem; font-weight:600; letter-spacing:.08em;
-            color: var(--gray-400); text-decoration:none; transition:var(--tr);
+            font-size:1.4rem;
+            font-weight:600;
+            letter-spacing:.08em;
+            color: var(--gray-400);
+            text-decoration:none;
+            transition:var(--tr);
         }
         .mobile-menu a:hover { color: var(--gold); }
 
@@ -160,30 +194,42 @@
 
         .sec-label {
             font-family: var(--font-en);
-            font-size: .68rem; font-weight:600;
-            letter-spacing: .32em; text-transform:uppercase;
+            font-size: .68rem;
+            font-weight:600;
+            letter-spacing: .32em;
+            text-transform:uppercase;
             color: var(--gold);
             margin-bottom: 1rem;
-            display: flex; align-items:center; gap:1rem;
+            display: flex;
+            align-items:center;
+            gap:1rem;
         }
         .sec-label::before {
-            content:''; display:block;
-            width:28px; height:1px;
-            background: var(--gold); flex-shrink:0;
+            content:'';
+            display:block;
+            width:28px;
+            height:1px;
+            background: var(--gold);
+            flex-shrink:0;
         }
         .sec-title {
             font-size: clamp(2rem, 4vw, 3.4rem);
-            font-weight: 800; line-height:1.15;
-            color: var(--white); margin-bottom:1.5rem;
+            font-weight: 800;
+            line-height:1.15;
+            color: var(--white);
+            margin-bottom:1.5rem;
         }
         .sec-sub {
-            font-size: .95rem; color: var(--gray-400);
-            line-height:1.85; max-width:580px;
+            font-size: .95rem;
+            color: var(--gray-400);
+            line-height:1.85;
+            max-width:580px;
         }
 
         /* ─── REVEAL ANIMATION ─── */
         .reveal {
-            opacity:0; transform:translateY(38px);
+            opacity:0;
+            transform:translateY(38px);
             transition: opacity .85s var(--ease), transform .85s var(--ease);
         }
         .reveal.visible { opacity:1; transform:translateY(0); }
@@ -197,13 +243,18 @@
         ──────────────────────────────── */
         #hero {
             min-height:100vh;
-            display:flex; flex-direction:column; justify-content:center;
-            padding: 10% 5%; overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            padding: 10% 5%;
+            overflow:hidden;
         }
 
         /* grid lines */
         .hero-grid {
-            position:absolute; inset:0; pointer-events:none;
+            position:absolute;
+            inset:0;
+            pointer-events:none;
             background-image:
                 linear-gradient(rgba(197,160,89,.025) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(197,160,89,.025) 1px, transparent 1px);
@@ -211,44 +262,68 @@
         }
         /* radial glow */
         .hero-glow {
-            position:absolute; top:50%; right:-15%;
+            position:absolute;
+            top:50%;
+            right:-15%;
             transform:translateY(-50%);
-            width:70vw; height:70vw;
+            width:70vw;
+            height:70vw;
             background:radial-gradient(ellipse, rgba(197,160,89,.045) 0%, transparent 68%);
             pointer-events:none;
         }
         /* diagonal accent line */
         .hero-accent-line {
-            position:absolute; top:0; left:30%;
-            width:1px; height:100%;
+            position:absolute;
+            top:0;
+            left:30%;
+            width:1px;
+            height:100%;
             background:linear-gradient(to bottom, transparent, rgba(197,160,89,.08), transparent);
             pointer-events:none;
         }
 
-        .hero-content { position:relative; z-index:2; max-width:960px; }
+        .hero-content {
+            position:relative;
+            z-index:2;
+            max-width:960px;
+            width: 100%;
+        }
 
         .hero-eyebrow {
             font-family: var(--font-en);
-            font-size:.7rem; font-weight:500; letter-spacing:.42em;
-            text-transform:uppercase; color:var(--gold);
+            font-size:.7rem;
+            font-weight:500;
+            letter-spacing:.42em;
+            text-transform:uppercase;
+            color:var(--gold);
             margin-bottom:2.2rem;
-            display:flex; align-items:center; gap:1rem;
-            opacity:0; animation:fadeUp .8s forwards .3s;
+            display:flex;
+            align-items:center;
+            gap:1rem;
+            flex-wrap:wrap;
+            opacity:0;
+            animation:fadeUp .8s forwards .3s;
         }
-        .hero-eyebrow::before { content:''; display:block; width:36px; height:1px; background:var(--gold); }
+        .hero-eyebrow::before { content:''; display:block; width:36px; height:1px; background:var(--gold); flex-shrink:0; }
         .hero-eyebrow .dot {
-            width:6px; height:6px; border-radius:50%;
-            background:var(--gold); opacity:.6;
+            width:6px;
+            height:6px;
+            border-radius:50%;
+            background:var(--gold);
+            opacity:.6;
             animation:pulse 2.5s ease-in-out infinite;
+            flex-shrink:0;
         }
 
         .hero-name {
             font-family: var(--font-en);
             font-size: clamp(4.5rem, 8.5vw, 8.5rem);
-            font-weight:900; line-height:.88;
+            font-weight:900;
+            line-height:.88;
             letter-spacing:-.03em;
             margin-bottom:1.6rem;
-            opacity:0; animation:fadeUp .85s forwards .5s;
+            opacity:0;
+            animation:fadeUp .85s forwards .5s;
         }
         .hero-name .line-outline {
             display:block;
@@ -260,46 +335,78 @@
         .hero-role {
             font-family: var(--font-en);
             font-size:clamp(1rem, 2.2vw, 1.35rem);
-            font-weight:300; letter-spacing:.04em;
-            color: var(--gray-400); margin-bottom:2.6rem;
-            opacity:0; animation:fadeUp .85s forwards .7s;
+            font-weight:300;
+            letter-spacing:.04em;
+            color: var(--gray-400);
+            margin-bottom:2.6rem;
+            opacity:0;
+            animation:fadeUp .85s forwards .7s;
         }
         .hero-role strong { color:var(--gold); font-weight:600; }
 
         .hero-desc {
-            font-size:1rem; line-height:1.9; color:var(--gray-400);
-            max-width:460px; margin-bottom:3.2rem;
-            opacity:0; animation:fadeUp .85s forwards .9s;
+            font-size:1rem;
+            line-height:1.9;
+            color:var(--gray-400);
+            max-width:460px;
+            margin-bottom:3.2rem;
+            opacity:0;
+            animation:fadeUp .85s forwards .9s;
         }
 
         .hero-btns {
-            display:flex; gap:1.4rem; align-items:center; flex-wrap:wrap;
-            opacity:0; animation:fadeUp .85s forwards 1.05s;
+            display:flex;
+            gap:1.4rem;
+            align-items:center;
+            flex-wrap:wrap;
+            opacity:0;
+            animation:fadeUp .85s forwards 1.05s;
+            margin-bottom: 1rem;
         }
         .btn-gold {
             font-family: var(--font-en);
-            font-size:.78rem; font-weight:700; letter-spacing:.16em;
-            text-transform:uppercase; color:var(--obsidian);
-            background:var(--gold); border:1px solid var(--gold);
-            padding:.95rem 2.6rem; border-radius:2px;
-            text-decoration:none; position:relative; overflow:hidden;
+            font-size:.78rem;
+            font-weight:700;
+            letter-spacing:.16em;
+            text-transform:uppercase;
+            color:var(--obsidian);
+            background:var(--gold);
+            border:1px solid var(--gold);
+            padding:.95rem 2.6rem;
+            border-radius:2px;
+            text-decoration:none;
+            position:relative;
+            overflow:hidden;
             transition: box-shadow .3s, background .3s;
+            white-space: nowrap;
         }
         .btn-gold::after {
-            content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+            content:'';
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
             background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
             transition:left .55s;
         }
         .btn-gold:hover::after { left:100%; }
-        .btn-gold:hover { background:var(--gold-light); box-shadow:0 0 34px rgba(197,160,89,.32); }
+        .btn-gold:hover { background:var(--gold-light);
+            box-shadow:0 0 34px rgba(197,160,89,.32); }
 
         .btn-ghost {
             font-family: var(--font-en);
-            font-size:.78rem; font-weight:500; letter-spacing:.16em;
-            text-transform:uppercase; color:var(--gray-400);
+            font-size:.78rem;
+            font-weight:500;
+            letter-spacing:.16em;
+            text-transform:uppercase;
+            color:var(--gray-400);
             text-decoration:none;
-            display:flex; align-items:center; gap:.7rem;
+            display:flex;
+            align-items:center;
+            gap:.7rem;
             transition: color .3s;
+            white-space: nowrap;
         }
         .btn-ghost i { font-size:.85rem; transition:transform .3s; }
         .btn-ghost:hover { color:var(--gold); }
@@ -307,32 +414,55 @@
 
         /* stats row */
         .hero-stats {
-            display:flex; gap:4rem; margin-top:5rem; flex-wrap:wrap;
-            opacity:0; animation:fadeUp .85s forwards 1.25s;
+            display:flex;
+            gap:4rem;
+            margin-top:3rem;
+            flex-wrap:wrap;
+            opacity:0;
+            animation:fadeUp .85s forwards 1.25s;
         }
-        .stat { display:flex; flex-direction:column; gap:.25rem; }
+        .stat {
+            display:flex;
+            flex-direction:column;
+            gap:.25rem;
+            flex-shrink: 0;
+        }
         .stat-n {
             font-family: var(--font-en);
-            font-size:2.1rem; font-weight:800; line-height:1; color:var(--white);
+            font-size:2.1rem;
+            font-weight:800;
+            line-height:1;
+            color:var(--white);
         }
         .stat-n em { color:var(--gold); font-style:normal; }
-        .stat-l { font-size:.78rem; color:var(--gray-600); letter-spacing:.04em; }
+        .stat-l { font-size:.78rem; color:var(--gray-600); letter-spacing:.04em; white-space: nowrap; }
 
         /* scroll indicator */
         .scroll-indicator {
-            position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
-            display:flex; flex-direction:column; align-items:center; gap:.5rem;
-            opacity:0; animation:fadeUp .8s forwards 1.5s;
+            position:absolute;
+            bottom:2.5rem;
+            left:50%;
+            transform:translateX(-50%);
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:.5rem;
+            opacity:0;
+            animation:fadeUp .8s forwards 1.5s;
+            z-index: 3;
         }
         .scroll-line {
-            width:1px; height:55px;
+            width:1px;
+            height:55px;
             background:linear-gradient(to bottom, var(--gold), transparent);
             animation:scrollPulse 2.2s ease-in-out infinite;
         }
         .scroll-txt {
             font-family: var(--font-en);
-            font-size:.58rem; letter-spacing:.32em;
-            text-transform:uppercase; color:var(--gray-600);
+            font-size:.58rem;
+            letter-spacing:.32em;
+            text-transform:uppercase;
+            color:var(--gray-600);
             writing-mode:vertical-rl;
         }
 
@@ -340,22 +470,30 @@
            MARQUEE STRIP
         ──────────────────────────────── */
         .marquee-wrap {
-            padding:0; overflow:hidden;
+            padding:0;
+            overflow:hidden;
             border-top:1px solid var(--gold-border);
             border-bottom:1px solid var(--gold-border);
             background:var(--obsidian-2);
         }
         .marquee-track {
-            display:flex; width:max-content;
+            display:flex;
+            width:max-content;
             animation:marquee 35s linear infinite;
         }
         .marquee-track:hover { animation-play-state:paused; }
         .m-item {
             font-family: var(--font-en);
-            font-size:.68rem; font-weight:500;
-            letter-spacing:.2em; text-transform:uppercase;
-            color:var(--gray-600); padding:.9rem 2.2rem;
-            white-space:nowrap; display:flex; align-items:center; gap:1rem;
+            font-size:.68rem;
+            font-weight:500;
+            letter-spacing:.2em;
+            text-transform:uppercase;
+            color:var(--gray-600);
+            padding:.9rem 2.2rem;
+            white-space:nowrap;
+            display:flex;
+            align-items:center;
+            gap:1rem;
             transition:color .3s;
         }
         .m-item:hover { color:var(--gold); }
@@ -372,19 +510,27 @@
             display:grid;
             grid-template-columns:repeat(3,1fr);
             border:1px solid var(--gold-border);
-            gap:1px; background:var(--gold-border);
+            gap:1px;
+            background:var(--gold-border);
         }
         .exp-card {
             background:var(--obsidian);
-            padding:3rem; position:relative; overflow:hidden;
+            padding:3rem;
+            position:relative;
+            overflow:hidden;
             transition:background var(--tr-slow);
         }
         /* top bar on hover */
         .exp-card::before {
-            content:''; position:absolute;
-            top:0; left:0; right:0; height:1px;
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:1px;
             background:var(--gold);
-            transform:scaleX(0); transform-origin:left;
+            transform:scaleX(0);
+            transform-origin:left;
             transition:transform .5s var(--ease);
         }
         .exp-card:hover::before { transform:scaleX(1); transform-origin:right; }
@@ -392,40 +538,58 @@
 
         /* subtle bg number */
         .ec-num {
-            position:absolute; bottom:1.5rem; right:2rem;
-            font-family:var(--font-en); font-size:5rem;
-            font-weight:900; font-style:italic;
-            color:rgba(197,160,89,.04); line-height:1;
-            pointer-events:none; user-select:none;
+            position:absolute;
+            bottom:1.5rem;
+            right:2rem;
+            font-family:var(--font-en);
+            font-size:5rem;
+            font-weight:900;
+            font-style:italic;
+            color:rgba(197,160,89,.04);
+            line-height:1;
+            pointer-events:none;
+            user-select:none;
         }
 
         .ec-icon {
-            width:48px; height:48px;
+            width:48px;
+            height:48px;
             border:1px solid var(--gold-border);
             border-radius:4px;
-            display:flex; align-items:center; justify-content:center;
-            margin-bottom:1.5rem; transition:var(--tr);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:1.5rem;
+            transition:var(--tr);
         }
         .exp-card:hover .ec-icon { border-color:var(--gold); background:var(--gold-faint); }
         .ec-icon i { font-size:1.15rem; color:var(--gold); }
 
         .ec-title {
             font-family:var(--font-ar);
-            font-size:1.2rem; font-weight:700;
-            color:var(--white); margin-bottom:.9rem; line-height:1.3;
+            font-size:1.2rem;
+            font-weight:700;
+            color:var(--white);
+            margin-bottom:.9rem;
+            line-height:1.3;
         }
         .ec-desc {
-            font-size:.88rem; color:var(--gray-400);
-            line-height:1.85; margin-bottom:1.8rem;
+            font-size:.88rem;
+            color:var(--gray-400);
+            line-height:1.85;
+            margin-bottom:1.8rem;
         }
         .ec-tags { display:flex; flex-wrap:wrap; gap:.4rem; }
         .tag {
             font-family:var(--font-en);
-            font-size:.62rem; font-weight:500;
-            letter-spacing:.1em; text-transform:uppercase;
+            font-size:.62rem;
+            font-weight:500;
+            letter-spacing:.1em;
+            text-transform:uppercase;
             color:var(--gray-600);
             border:1px solid rgba(255,255,255,.055);
-            padding:.28rem .75rem; border-radius:2px;
+            padding:.28rem .75rem;
+            border-radius:2px;
             transition:var(--tr);
         }
         .exp-card:hover .tag { border-color:var(--gold-border); color:var(--gray-400); }
@@ -436,8 +600,10 @@
         #edge { background:var(--obsidian); }
 
         .edge-grid {
-            display:grid; grid-template-columns:1fr 1fr;
-            gap:5.5rem; align-items:start;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:5.5rem;
+            align-items:start;
             margin-top:4.5rem;
         }
 
@@ -445,12 +611,16 @@
         .terminal {
             background:#090909;
             border:1px solid rgba(197,160,89,.14);
-            border-radius:8px; overflow:hidden;
+            border-radius:8px;
+            overflow:hidden;
             box-shadow:0 24px 64px rgba(0,0,0,.55);
         }
         .term-bar {
-            background:#151515; padding:.7rem 1.1rem;
-            display:flex; align-items:center; gap:.55rem;
+            background:#151515;
+            padding:.7rem 1.1rem;
+            display:flex;
+            align-items:center;
+            gap:.55rem;
             border-bottom:1px solid rgba(197,160,89,.08);
         }
         .tdot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
@@ -458,46 +628,64 @@
         .tdot:nth-child(2){ background:#febc2e; }
         .tdot:nth-child(3){ background:#28c840; }
         .term-title {
-            font-family:var(--font-en); font-size:.68rem;
-            color:var(--gray-600); margin-left:auto; letter-spacing:.08em;
+            font-family:var(--font-en);
+            font-size:.68rem;
+            color:var(--gray-600);
+            margin-left:auto;
+            letter-spacing:.08em;
         }
         .term-body {
             padding:1.4rem 1.6rem;
             font-family:'Courier New',monospace;
-            font-size:.78rem; line-height:2;
+            font-size:.78rem;
+            line-height:2;
         }
-        .tl { display:flex; gap:.6rem; align-items:baseline; }
-        .pr  { color:var(--gold); }
+        .tl { display:flex; gap:.6rem; align-items:baseline; flex-wrap:wrap; }
+        .pr  { color:var(--gold); flex-shrink:0; }
         .cm  { color:#7ec8e3; }
-        .out { color:#888; padding-left:.5rem; }
+        .out { color:#888; padding-left:.5rem; flex-shrink:0; }
         .val { color:#9ab870; }
         .cmt { color:#444; font-style:italic; }
         .tcursor {
-            display:inline-block; width:7px; height:13px;
+            display:inline-block;
+            width:7px;
+            height:13px;
             background:var(--gold);
             animation:blink 1.1s step-end infinite;
-            vertical-align:middle; margin-left:2px;
+            vertical-align:middle;
+            margin-left:2px;
         }
 
         /* Pillars */
         .pillars { display:flex; flex-direction:column; gap:1.2rem; }
         .pillar {
-            display:flex; gap:1.4rem; align-items:flex-start;
+            display:flex;
+            gap:1.4rem;
+            align-items:flex-start;
             padding:1.4rem 1.6rem;
             border:1px solid rgba(255,255,255,.04);
-            border-radius:4px; transition:var(--tr-slow);
+            border-radius:4px;
+            transition:var(--tr-slow);
         }
         .pillar:hover { border-color:var(--gold-border); background:var(--gold-faint); }
         .p-icon {
-            width:40px; height:40px; flex-shrink:0;
-            background:var(--gold-faint); border:1px solid var(--gold-border);
-            border-radius:4px; display:flex; align-items:center; justify-content:center;
+            width:40px;
+            height:40px;
+            flex-shrink:0;
+            background:var(--gold-faint);
+            border:1px solid var(--gold-border);
+            border-radius:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
         }
         .p-icon i { font-size:.9rem; color:var(--gold); }
         .p-text h4 {
             font-family:var(--font-ar);
-            font-size:.97rem; font-weight:700;
-            color:var(--white); margin-bottom:.4rem;
+            font-size:.97rem;
+            font-weight:700;
+            color:var(--white);
+            margin-bottom:.4rem;
         }
         .p-text p { font-size:.85rem; color:var(--gray-400); line-height:1.7; }
 
@@ -508,21 +696,28 @@
             background:var(--obsidian-2);
             text-align:center;
             padding:10rem 5%;
-            position:relative; overflow:hidden;
+            position:relative;
+            overflow:hidden;
         }
         /* huge BG text */
         #contact::before {
             content:'LET\'S BUILD';
-            position:absolute; top:50%; left:50%;
+            position:absolute;
+            top:50%;
+            left:50%;
             transform:translate(-50%,-54%);
             font-family:var(--font-en);
             font-size:clamp(4rem,10vw,10rem);
-            font-weight:900; letter-spacing:-.05em;
+            font-weight:900;
+            letter-spacing:-.05em;
             color:rgba(255,255,255,.025);
-            white-space:nowrap; pointer-events:none; user-select:none;
+            white-space:nowrap;
+            pointer-events:none;
+            user-select:none;
         }
         .ct-glow {
-            position:absolute; inset:0;
+            position:absolute;
+            inset:0;
             background:radial-gradient(ellipse 60% 60% at 50% 50%, rgba(197,160,89,.025), transparent);
             pointer-events:none;
         }
@@ -530,15 +725,19 @@
 
         .ct-tagline {
             font-size:clamp(1rem,.2rem + 2.5vw,1.1rem);
-            color:var(--gray-400); line-height:1.9;
-            max-width:500px; margin:0 auto 2.8rem;
+            color:var(--gray-400);
+            line-height:1.9;
+            max-width:500px;
+            margin:0 auto 2.8rem;
         }
         .ct-email {
             display:inline-block;
             font-family:var(--font-en);
             font-size:clamp(1.4rem, 3.5vw, 2.6rem);
-            font-weight:700; letter-spacing:-.025em;
-            color:var(--white); text-decoration:none;
+            font-weight:700;
+            letter-spacing:-.025em;
+            color:var(--white);
+            text-decoration:none;
             border-bottom:1px solid rgba(197,160,89,.3);
             padding-bottom:.2rem;
             transition:color .3s, border-color .3s;
@@ -547,21 +746,31 @@
         .ct-email:hover { color:var(--gold); border-color:var(--gold); }
 
         .ct-links {
-            display:flex; justify-content:center;
-            gap:1.2rem; flex-wrap:wrap;
+            display:flex;
+            justify-content:center;
+            gap:1.2rem;
+            flex-wrap:wrap;
         }
         .ct-link {
             font-family:var(--font-en);
-            font-size:.72rem; font-weight:600;
-            letter-spacing:.14em; text-transform:uppercase;
-            color:var(--gray-400); text-decoration:none;
-            display:flex; align-items:center; gap:.6rem;
+            font-size:.72rem;
+            font-weight:600;
+            letter-spacing:.14em;
+            text-transform:uppercase;
+            color:var(--gray-400);
+            text-decoration:none;
+            display:flex;
+            align-items:center;
+            gap:.6rem;
             border:1px solid rgba(255,255,255,.07);
-            padding:.75rem 1.6rem; border-radius:2px;
+            padding:.75rem 1.6rem;
+            border-radius:2px;
             transition:var(--tr);
         }
         .ct-link i { font-size:.95rem; }
-        .ct-link:hover { color:var(--gold); border-color:var(--gold-border); background:var(--gold-faint); }
+        .ct-link:hover { color:var(--gold);
+            border-color:var(--gold-border);
+            background:var(--gold-faint); }
 
         /* ─────────────────────────────────
            FOOTER
@@ -569,15 +778,24 @@
         footer {
             padding:1.8rem 5%;
             border-top:1px solid rgba(255,255,255,.04);
-            display:flex; align-items:center;
-            justify-content:space-between; flex-wrap:wrap; gap:1rem;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            gap:1rem;
         }
         .f-logo {
-            font-family:var(--font-en); font-size:.85rem;
-            font-weight:700; letter-spacing:.08em; color:var(--gray-600);
+            font-family:var(--font-en);
+            font-size:.85rem;
+            font-weight:700;
+            letter-spacing:.08em;
+            color:var(--gray-600);
         }
         .f-logo em { color:var(--gold); font-style:normal; }
-        .f-copy { font-family:var(--font-en); font-size:.68rem; color:var(--gray-600); letter-spacing:.04em; }
+        .f-copy { font-family:var(--font-en);
+            font-size:.68rem;
+            color:var(--gray-600);
+            letter-spacing:.04em; }
 
         /* ─── KEYFRAMES ─── */
         @keyframes fadeUp {
@@ -601,25 +819,360 @@
             50%      { opacity:1; transform:scale(1.4); }
         }
 
-        /* ─── RESPONSIVE ─── */
+        /* ────────────────────────────────────
+           📱 RESPONSIVE BREAKPOINTS
+        ──────────────────────────────────── */
+
+        /* ── ≤1100px: Tablet Landscape ── */
         @media (max-width:1100px){
-            .exp-grid { grid-template-columns:repeat(2,1fr); }
-            .edge-grid { grid-template-columns:1fr; gap:3.5rem; }
+            .exp-grid {
+                grid-template-columns:repeat(2,1fr);
+                gap: 2px;
+            }
+            .edge-grid {
+                grid-template-columns:1fr;
+                gap:3.5rem;
+            }
+            .hero-stats {
+                gap: 2.5rem;
+            }
         }
+
+        /* ── ≤768px: Tablet Portrait / Large Phones ── */
         @media (max-width:768px){
-            section { padding:5.5rem 5%; }
-            .nav-links { display:none; }
-            .hamburger { display:flex; }
-            .exp-grid { grid-template-columns:1fr; gap:1px; }
-            .hero-stats { position:relative; bottom:auto; margin-top:3.5rem; gap:2.5rem; }
-            .cursor, .cursor-ring { display:none; }
-            body { cursor:auto; }
-            .ct-links { flex-direction:column; align-items:center; }
+            section {
+                padding:5.5rem 5%;
+            }
+            .nav-links {
+                display:none;
+            }
+            .hamburger {
+                display:flex;
+            }
+
+            /* ── HERO Mobile ── */
+            #hero {
+                padding: 18% 5% 8rem;
+                min-height: auto;
+            }
+            .hero-name {
+                font-size: clamp(3.2rem, 9vw, 5rem);
+                margin-bottom: 1.2rem;
+            }
+            .hero-eyebrow {
+                font-size: .64rem;
+                letter-spacing: .28em;
+                margin-bottom: 1.6rem;
+                gap: .6rem;
+            }
+            .hero-eyebrow::before {
+                width: 24px;
+            }
+            .hero-role {
+                font-size: .95rem;
+                margin-bottom: 1.6rem;
+            }
+            .hero-desc {
+                font-size: .9rem;
+                margin-bottom: 2.2rem;
+                max-width: 100%;
+            }
+            .hero-btns {
+                gap: 1rem;
+                margin-bottom: .5rem;
+            }
+            .btn-gold {
+                padding: .8rem 1.8rem;
+                font-size: .7rem;
+                letter-spacing: .1em;
+            }
+            .btn-ghost {
+                font-size: .7rem;
+                letter-spacing: .1em;
+            }
+
+            /* Stats row — wrap naturally, 2+1 layout */
+            .hero-stats {
+                position: relative;
+                bottom: auto;
+                margin-top: 2.8rem;
+                gap: 1.8rem 2.2rem;
+                justify-content: flex-start;
+            }
+            .stat {
+                flex: 0 0 auto;
+                min-width: 100px;
+            }
+            .stat-n {
+                font-size: 1.7rem;
+            }
+            .stat-l {
+                font-size: .7rem;
+            }
+
+            /* Scroll indicator — move down & smaller */
+            .scroll-indicator {
+                bottom: 1.2rem;
+            }
+            .scroll-line {
+                height: 36px;
+            }
+            .scroll-txt {
+                font-size: .52rem;
+                letter-spacing: .22em;
+            }
+
+            /* ── EXPERTISE Grid Mobile ── */
+            .exp-grid {
+                grid-template-columns:1fr;
+                gap: 14px;
+                border: 1px solid var(--gold-border);
+                background: transparent;
+            }
+            .exp-card {
+                padding: 2.2rem 1.6rem;
+                border: 1px solid rgba(197,160,89,.10);
+                border-radius: 4px;
+                background: var(--obsidian);
+            }
+            .exp-card:not(:last-child) {
+                margin-bottom: 0;
+            }
+            .ec-num {
+                font-size: 3.6rem;
+                bottom: 1rem;
+                right: 1.2rem;
+            }
+            .ec-icon {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 1rem;
+            }
+            .ec-icon i {
+                font-size: 1rem;
+            }
+            .ec-title {
+                font-size: 1.05rem;
+                margin-bottom: .6rem;
+            }
+            .ec-desc {
+                font-size: .82rem;
+                margin-bottom: 1.2rem;
+            }
+            .tag {
+                font-size: .58rem;
+                padding: .22rem .6rem;
+            }
+
+            .exp-intro {
+                margin-bottom: 3rem;
+            }
+
+            /* ── EDGE Mobile ── */
+            .edge-grid {
+                gap: 2.5rem;
+                margin-top: 2.5rem;
+            }
+            .term-body {
+                font-size: .7rem;
+                padding: 1rem 1.1rem;
+                line-height: 1.8;
+            }
+            .term-title {
+                font-size: .6rem;
+            }
+            .pillar {
+                padding: 1.1rem 1.2rem;
+                gap: 1rem;
+            }
+            .p-icon {
+                width: 34px;
+                height: 34px;
+            }
+            .p-icon i {
+                font-size: .78rem;
+            }
+            .p-text h4 {
+                font-size: .88rem;
+            }
+            .p-text p {
+                font-size: .78rem;
+            }
+
+            /* ── CONTACT Mobile ── */
+            #contact {
+                padding: 6rem 5%;
+            }
+            .ct-email {
+                font-size: clamp(1.1rem, 5vw, 2rem);
+                margin-bottom: 2.5rem;
+            }
+            .ct-tagline {
+                margin-bottom: 2rem;
+                font-size: .9rem;
+            }
+            .ct-links {
+                flex-direction: column;
+                align-items: center;
+                gap: .9rem;
+            }
+            .ct-link {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: .7rem 1.2rem;
+                font-size: .68rem;
+            }
+
+            /* ── Cursor off ── */
+            .cursor, .cursor-ring {
+                display:none;
+            }
+            body {
+                cursor:auto;
+            }
+
+            /* ── Footer Mobile ── */
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: .5rem;
+                padding: 1.4rem 5%;
+            }
+            .f-copy {
+                font-size: .62rem;
+            }
         }
-        @media (max-width:480px){
-            .hero-name { font-size:clamp(2.8rem,13vw,4.5rem); }
-            .exp-card { padding:2rem; }
-            .ct-links { gap:.8rem; }
+
+        /* ── ≤540px: Small Phones ── */
+        @media (max-width:540px){
+            #hero {
+                padding: 20% 5% 7rem;
+            }
+            .hero-name {
+                font-size: clamp(2.6rem, 12vw, 3.8rem);
+            }
+            .hero-eyebrow {
+                font-size: .58rem;
+                letter-spacing: .2em;
+            }
+            .hero-stats {
+                gap: 1.4rem 1.8rem;
+                margin-top: 2.2rem;
+            }
+            .stat {
+                min-width: 80px;
+            }
+            .stat-n {
+                font-size: 1.45rem;
+            }
+            .stat-l {
+                font-size: .65rem;
+            }
+            .btn-gold {
+                padding: .75rem 1.5rem;
+                font-size: .66rem;
+            }
+            .btn-ghost {
+                font-size: .66rem;
+            }
+            .hero-desc {
+                font-size: .82rem;
+            }
+            .hero-role {
+                font-size: .85rem;
+            }
+
+            .exp-card {
+                padding: 1.7rem 1.2rem;
+            }
+            .ec-num {
+                font-size: 2.8rem;
+                bottom: .6rem;
+                right: .8rem;
+            }
+            .ec-title {
+                font-size: .95rem;
+            }
+            .ec-desc {
+                font-size: .76rem;
+            }
+
+            .sec-title {
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
+            }
+            .sec-sub {
+                font-size: .82rem;
+            }
+
+            .scroll-indicator {
+                bottom: .8rem;
+            }
+            .scroll-line {
+                height: 28px;
+            }
+            .scroll-txt {
+                font-size: .46rem;
+            }
+        }
+
+        /* ── ≤400px: Very Small Phones ── */
+        @media (max-width:400px){
+            #hero {
+                padding: 22% 5% 6rem;
+            }
+            .hero-stats {
+                gap: 1.2rem 1.4rem;
+            }
+            .stat {
+                min-width: 70px;
+            }
+            .stat-n {
+                font-size: 1.3rem;
+            }
+            .stat-l {
+                font-size: .6rem;
+            }
+            .hero-btns {
+                flex-direction: column;
+                align-items: stretch;
+                gap: .8rem;
+            }
+            .btn-gold,
+            .btn-ghost {
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                width: 100%;
+            }
+            .exp-card {
+                padding: 1.4rem 1rem;
+            }
+            .ec-icon {
+                width: 34px;
+                height: 34px;
+            }
+            .ec-icon i {
+                font-size: .85rem;
+            }
+            .pillar {
+                flex-direction: column;
+                gap: .8rem;
+                padding: 1rem;
+            }
+            .p-icon {
+                width: 30px;
+                height: 30px;
+            }
+            .term-body {
+                font-size: .64rem;
+                padding: .8rem .9rem;
+            }
+            .ct-link {
+                max-width: 100%;
+                font-size: .64rem;
+                padding: .6rem 1rem;
+            }
         }
     </style>
 </head>
@@ -650,198 +1203,202 @@
 
     <!-- ── HERO ── -->
     <section id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-accent-line"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-accent-line"></div>
 
-    <div class="hero-content">
-        <div class="hero-eyebrow">
-            <div class=""></div>
-            Currently open for new Technical Opportunities
-        </div>
-
-        <h1 class="hero-name">
-            <span class="line-outline">Mohamed</span>
-            <span class="line-solid">El-Glaly</span>
-        </h1>
-
-        <p class="hero-role">
-            <strong>Full Stack Engineer</strong> — Specializing in High-Performance CMS & Aesthetic Digital Experiences
-        </p>
-
-        <p class="hero-desc">
-            Bridging the gap between robust backend logic and seamless frontend experiences. 
-            I engineer performant digital ecosystems designed to solve real-world technical friction.
-        </p>
-
-        <div class="hero-btns">
-            <a href="#contact" class="btn-gold">Discuss a Project</a>
-            <a href="#expertise" class="btn-ghost">
-                <span>View Expertise</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-n" data-target="8"><span class="cnt">8</span><em>+</em></div>
-                <div class="stat-l">Years Experience</div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span>Currently open for new Technical Opportunities</span>
             </div>
-            <div class="stat">
-                <div class="stat-n" data-target="50"><span class="cnt">50</span><em>+</em></div>
-                <div class="stat-l">Complex Solutions</div>
+
+            <h1 class="hero-name">
+                <span class="line-outline">Mohamed</span>
+                <span class="line-solid">El-Glaly</span>
+            </h1>
+
+            <p class="hero-role">
+                <strong>Full Stack Engineer</strong> — Specializing in High-Performance CMS & Aesthetic Digital Experiences
+            </p>
+
+            <p class="hero-desc">
+                Bridging the gap between robust backend logic and seamless frontend experiences.
+                I engineer performant digital ecosystems designed to solve real-world technical friction.
+            </p>
+
+            <div class="hero-btns">
+                <a href="#contact" class="btn-gold">Discuss a Project</a>
+                <a href="#expertise" class="btn-ghost">
+                    <span>View Expertise</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <div class="stat">
-                <div class="stat-n" data-target="100"><span class="cnt">100</span><em>%</em></div>
-                <div class="stat-l">Performance Driven</div>
-            </div>
-        </div>
-    </div>
 
-    <div class="scroll-indicator">
-        <div class="scroll-line"></div>
-        <span class="scroll-txt">Scroll</span>
-    </div>
-</section>
-
-<div class="marquee-wrap">
-    <div class="marquee-track" id="mq">
-        <span class="m-item">Full-Stack Development <span class="m-sep">◆</span></span>
-        <span class="m-item">Performance Optimization <span class="m-sep">◆</span></span>
-        <span class="m-item">Custom CMS Solutions <span class="m-sep">◆</span></span>
-        <span class="m-item">Advanced UI/UX Engineering <span class="m-sep">◆</span></span>
-        <span class="m-item">Technical Audits <span class="m-sep">◆</span></span>
-        <span class="m-item">CachyOS / Linux Systems <span class="m-sep">◆</span></span>
-        <span class="m-item">Scalable Architecture <span class="m-sep">◆</span></span>
-        <span class="m-item">API & System Integration <span class="m-sep">◆</span></span>
-    </div>
-</div>
-
-<section id="expertise">
-    <div class="exp-intro">
-        <div class="sec-label reveal">Technical Expertise</div>
-        <h2 class="sec-title reveal d1">High-Level Engineering<br>Tailored to Your Needs</h2>
-        <p class="sec-sub reveal d2">
-            I specialize in the synergy between aesthetics and performance. 
-            Providing technical solutions that are not just functional, but optimized for growth.
-        </p>
-    </div>
-
-    <div class="exp-grid">
-        <div class="exp-card reveal">
-            <div class="ec-num">01</div>
-            <div class="ec-icon"><i class="fas fa-laptop-code"></i></div>
-            <h3 class="ec-title">UI/UX Engineering</h3>
-            <p class="ec-desc">Building responsive, high-speed interfaces that don't compromise on beauty. Deep focus on Core Web Vitals and intuitive user journeys using modern JS and optimized CSS.</p>
-            <div class="ec-tags">
-                <span class="tag">Vanilla JS</span><span class="tag">ES6+</span>
-                <span class="tag">Performance CSS</span><span class="tag">Responsive Design</span>
-            </div>
-        </div>
-
-        <div class="exp-card reveal d1">
-            <div class="ec-num">02</div>
-            <div class="ec-icon"><i class="fas fa-puzzle-piece"></i></div>
-            <h3 class="ec-title">Custom CMS Architecture</h3>
-            <p class="ec-desc">Bending platforms like WordPress to meet complex needs. Developing custom plugins, hooks, and advanced meta structures where standard tools fall short.</p>
-            <div class="ec-tags">
-                <span class="tag">PHP 8+</span><span class="tag">Plugin Dev</span>
-                <span class="tag">WP Engine</span><span class="tag">Custom APIs</span>
-            </div>
-        </div>
-
-        <div class="exp-card reveal d2">
-            <div class="ec-num">03</div>
-            <div class="ec-icon"><i class="fas fa-gauge-high"></i></div>
-            <h3 class="ec-title">Performance Recovery</h3>
-            <p class="ec-desc">Identifying and fixing technical debt. I audit existing platforms to eliminate bottlenecks, optimize databases, and drastically reduce load times.</p>
-            <div class="ec-tags">
-                <span class="tag">Technical Audits</span><span class="tag">DB Optimization</span>
-                <span class="tag">Caching Layers</span><span class="tag">Query Tuning</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="edge">
-    <div class="sec-label reveal">Engineering Philosophy</div>
-    <h2 class="sec-title reveal d1">My Technical<br>Edge</h2>
-
-    <div class="edge-grid">
-        <div class="reveal d1">
-            <div class="terminal">
-                <div class="term-bar">
-                    <div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>
-                    <span class="term-title">~/dev — CachyOS Environment</span>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-n" data-target="8"><span class="cnt">8</span><em>+</em></div>
+                    <div class="stat-l">Years Experience</div>
                 </div>
-                <div class="term-body">
-                    <div class="tl"><span class="pr">❯</span><span class="cm">neofetch --minimal</span></div>
-                    <div class="tl"><span class="out">  OS:</span><span style="color:#c5a059">CachyOS (Arch-based) - Optimized for Performance</span></div>
-                    <div class="tl"><span class="out">  Shell:</span><span style="color:#888">zsh / dev-ready</span></div>
-                    <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="cm">grep "philosophy" dev_manifest.json</span></div>
-                    <div class="tl"><span class="out">"Performance":</span><span class="val">"Non-negotiable foundation"</span></div>
-                    <div class="tl"><span class="out">"Architecture":</span><span class="val">"Clean, Modular, Scalable"</span></div>
-                    <div class="tl"><span class="out">"UI/UX":</span><span class="val">"Elegant but Engineering-Driven"</span></div>
-                    <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="tcursor"></span></div>
+                <div class="stat">
+                    <div class="stat-n" data-target="50"><span class="cnt">50</span><em>+</em></div>
+                    <div class="stat-l">Complex Solutions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n" data-target="100"><span class="cnt">100</span><em>%</em></div>
+                    <div class="stat-l">Performance Driven</div>
                 </div>
             </div>
         </div>
 
-        <div class="pillars">
-            <div class="pillar reveal">
-                <div class="p-icon"><i class="fas fa-bolt"></i></div>
-                <div class="p-text">
-                    <h4>Performance is the Standard</h4>
-                    <p>I build with a "milliseconds matter" mindset. Whether it's server response or browser rendering, optimization is baked into every line of code.</p>
-                </div>
-            </div>
-            <div class="pillar reveal d1">
-                <div class="p-icon"><i class="fas fa-cubes"></i></div>
-                <div class="p-text">
-                    <h4>Custom-First Solutions</h4>
-                    <p>I don't just "use" tools; I extend them. I create bespoke plugins and custom logic layers that ensure the technology fits your business, not the other way around.</p>
-                </div>
-            </div>
-            <div class="pillar reveal d2">
-                <div class="p-icon"><i class="fas fa-wrench"></i></div>
-                <div class="p-text">
-                    <h4>Tech-Agnostic Problem Solving</h4>
-                    <p>My stack is chosen based on the problem. I combine technical depth in PHP and JS with a sys-admin approach to servers to deliver truly integrated solutions.</p>
-                </div>
-            </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-txt">Scroll</span>
+        </div>
+    </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="marquee-wrap">
+        <div class="marquee-track" id="mq">
+            <span class="m-item">Full-Stack Development <span class="m-sep">◆</span></span>
+            <span class="m-item">Performance Optimization <span class="m-sep">◆</span></span>
+            <span class="m-item">Custom CMS Solutions <span class="m-sep">◆</span></span>
+            <span class="m-item">Advanced UI/UX Engineering <span class="m-sep">◆</span></span>
+            <span class="m-item">Technical Audits <span class="m-sep">◆</span></span>
+            <span class="m-item">CachyOS / Linux Systems <span class="m-sep">◆</span></span>
+            <span class="m-item">Scalable Architecture <span class="m-sep">◆</span></span>
+            <span class="m-item">API & System Integration <span class="m-sep">◆</span></span>
         </div>
     </div>
-</section>
 
-<section id="contact">
-    <div class="ct-glow"></div>
-    <div class="ct-inner">
-        <div class="sec-label reveal" style="justify-content:center; margin-bottom:2rem;">Start a Conversation</div>
-        <h2 class="sec-title reveal d1" style="margin-bottom:1.2rem; font-size:clamp(2rem,5vw,4rem);">
-            Have a Technical Challenge<br>That Needs a Solution?
-        </h2>
-        <p class="ct-tagline reveal d2">
-            Whether you're building from scratch, scaling an existing platform, 
-            or need a technical audit to fix performance issues — let's build something solid.
-        </p>
-        <div class="reveal d2">
-            <a href="mailto:elglaly242@gmail.com" class="ct-email">Elglaly242@Gmail.com</a>
+    <!-- ── EXPERTISE ── -->
+    <section id="expertise">
+        <div class="exp-intro">
+            <div class="sec-label reveal">Technical Expertise</div>
+            <h2 class="sec-title reveal d1">High-Level Engineering<br>Tailored to Your Needs</h2>
+            <p class="sec-sub reveal d2">
+                I specialize in the synergy between aesthetics and performance.
+                Providing technical solutions that are not just functional, but optimized for growth.
+            </p>
         </div>
-        <div class="ct-links reveal d3">
-            <a href="https://www.linkedin.com/in/mohamed-elglaly/" target="_blank" rel="noopener" class="ct-link">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/mohamedelglaly" target="_blank" rel="noopener" class="ct-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
-    </div>
-</section>
 
-<footer>
-    <div class="f-logo">MOHAMED EL-GLALY<em>.</em></div>
-    <div class="f-copy">© 2025 · Full Stack Engineer &amp; Software Architect · Egypt</div>
-</footer>
+        <div class="exp-grid">
+            <div class="exp-card reveal">
+                <div class="ec-num">01</div>
+                <div class="ec-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3 class="ec-title">UI/UX Engineering</h3>
+                <p class="ec-desc">Building responsive, high-speed interfaces that don't compromise on beauty. Deep focus on Core Web Vitals and intuitive user journeys using modern JS and optimized CSS.</p>
+                <div class="ec-tags">
+                    <span class="tag">Vanilla JS</span><span class="tag">ES6+</span>
+                    <span class="tag">Performance CSS</span><span class="tag">Responsive Design</span>
+                </div>
+            </div>
+
+            <div class="exp-card reveal d1">
+                <div class="ec-num">02</div>
+                <div class="ec-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h3 class="ec-title">Custom CMS Architecture</h3>
+                <p class="ec-desc">Bending platforms like WordPress to meet complex needs. Developing custom plugins, hooks, and advanced meta structures where standard tools fall short.</p>
+                <div class="ec-tags">
+                    <span class="tag">PHP 8+</span><span class="tag">Plugin Dev</span>
+                    <span class="tag">WP Engine</span><span class="tag">Custom APIs</span>
+                </div>
+            </div>
+
+            <div class="exp-card reveal d2">
+                <div class="ec-num">03</div>
+                <div class="ec-icon"><i class="fas fa-gauge-high"></i></div>
+                <h3 class="ec-title">Performance Recovery</h3>
+                <p class="ec-desc">Identifying and fixing technical debt. I audit existing platforms to eliminate bottlenecks, optimize databases, and drastically reduce load times.</p>
+                <div class="ec-tags">
+                    <span class="tag">Technical Audits</span><span class="tag">DB Optimization</span>
+                    <span class="tag">Caching Layers</span><span class="tag">Query Tuning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EDGE / PHILOSOPHY ── -->
+    <section id="edge">
+        <div class="sec-label reveal">Engineering Philosophy</div>
+        <h2 class="sec-title reveal d1">My Technical<br>Edge</h2>
+
+        <div class="edge-grid">
+            <div class="reveal d1">
+                <div class="terminal">
+                    <div class="term-bar">
+                        <div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>
+                        <span class="term-title">~/dev — CachyOS Environment</span>
+                    </div>
+                    <div class="term-body">
+                        <div class="tl"><span class="pr">❯</span><span class="cm">neofetch --minimal</span></div>
+                        <div class="tl"><span class="out">OS:</span><span style="color:#c5a059">CachyOS (Arch-based) - Optimized for Performance</span></div>
+                        <div class="tl"><span class="out">Shell:</span><span style="color:#888">zsh / dev-ready</span></div>
+                        <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="cm">grep "philosophy" dev_manifest.json</span></div>
+                        <div class="tl"><span class="out">"Performance":</span><span class="val">"Non-negotiable foundation"</span></div>
+                        <div class="tl"><span class="out">"Architecture":</span><span class="val">"Clean, Modular, Scalable"</span></div>
+                        <div class="tl"><span class="out">"UI/UX":</span><span class="val">"Elegant but Engineering-Driven"</span></div>
+                        <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="tcursor"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pillars">
+                <div class="pillar reveal">
+                    <div class="p-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="p-text">
+                        <h4>Performance is the Standard</h4>
+                        <p>I build with a "milliseconds matter" mindset. Whether it's server response or browser rendering, optimization is baked into every line of code.</p>
+                    </div>
+                </div>
+                <div class="pillar reveal d1">
+                    <div class="p-icon"><i class="fas fa-cubes"></i></div>
+                    <div class="p-text">
+                        <h4>Custom-First Solutions</h4>
+                        <p>I don't just "use" tools; I extend them. I create bespoke plugins and custom logic layers that ensure the technology fits your business, not the other way around.</p>
+                    </div>
+                </div>
+                <div class="pillar reveal d2">
+                    <div class="p-icon"><i class="fas fa-wrench"></i></div>
+                    <div class="p-text">
+                        <h4>Tech-Agnostic Problem Solving</h4>
+                        <p>My stack is chosen based on the problem. I combine technical depth in PHP and JS with a sys-admin approach to servers to deliver truly integrated solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+        <div class="ct-glow"></div>
+        <div class="ct-inner">
+            <div class="sec-label reveal" style="justify-content:center; margin-bottom:2rem;">Start a Conversation</div>
+            <h2 class="sec-title reveal d1" style="margin-bottom:1.2rem; font-size:clamp(2rem,5vw,4rem);">
+                Have a Technical Challenge<br>That Needs a Solution?
+            </h2>
+            <p class="ct-tagline reveal d2">
+                Whether you're building from scratch, scaling an existing platform,
+                or need a technical audit to fix performance issues — let's build something solid.
+            </p>
+            <div class="reveal d2">
+                <a href="mailto:elglaly242@gmail.com" class="ct-email">Elglaly242@Gmail.com</a>
+            </div>
+            <div class="ct-links reveal d3">
+                <a href="https://www.linkedin.com/in/mohamed-elglaly/" target="_blank" rel="noopener" class="ct-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/mohamedelglaly" target="_blank" rel="noopener" class="ct-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="f-logo">MOHAMED EL-GLALY<em>.</em></div>
+        <div class="f-copy">© 2025 · Full Stack Engineer &amp; Software Architect · Egypt</div>
+    </footer>
 
     <!-- ══ SCRIPTS ══ -->
     <script>
