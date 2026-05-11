@@ -197,7 +197,7 @@
         #hero {
             min-height:100vh;
             display:flex; flex-direction:column; justify-content:center;
-            padding:0 5%; overflow:hidden;
+            padding: 10% 5%; overflow:hidden;
         }
 
         /* grid lines */
@@ -243,7 +243,7 @@
 
         .hero-name {
             font-family: var(--font-en);
-            font-size: clamp(3.8rem, 8.5vw, 8.5rem);
+            font-size: clamp(4.5rem, 8.5vw, 8.5rem);
             font-weight:900; line-height:.88;
             letter-spacing:-.03em;
             margin-bottom:1.6rem;
@@ -430,85 +430,6 @@
         .exp-card:hover .tag { border-color:var(--gold-border); color:var(--gray-400); }
 
         /* ─────────────────────────────────
-           CASE STUDIES
-        ──────────────────────────────── */
-        #work { background:var(--obsidian-2); }
-
-        .work-head {
-            display:flex; align-items:flex-end;
-            justify-content:space-between; gap:3rem;
-            margin-bottom:5rem; flex-wrap:wrap;
-        }
-        .work-head .sec-sub { margin:0; }
-
-        .cases { display:flex; flex-direction:column; }
-
-        .case {
-            display:grid; grid-template-columns:1fr 1fr;
-            border:1px solid rgba(197,160,89,.08); border-bottom:none;
-            transition:border-color var(--tr-slow);
-            position:relative; overflow:hidden;
-        }
-        .case:last-child { border-bottom:1px solid rgba(197,160,89,.08); }
-        .case:hover { border-color:rgba(197,160,89,.22); }
-
-        /* animated gold side stripe */
-        .case::after {
-            content:''; position:absolute;
-            top:0; left:0; width:2px; height:0;
-            background:var(--gold); transition:height .6s var(--ease);
-        }
-        .case:hover::after { height:100%; }
-
-        .case-l { padding:4rem; display:flex; flex-direction:column; justify-content:center; }
-        .case-r {
-            padding:4rem;
-            background:var(--obsidian-3);
-            border-left:1px solid rgba(197,160,89,.08);
-            display:flex; flex-direction:column; justify-content:center;
-        }
-        .case-big-num {
-            font-family:var(--font-en); font-size:4.5rem;
-            font-weight:900; font-style:italic;
-            color:rgba(197,160,89,.055); line-height:1;
-            margin-bottom:.8rem;
-        }
-        .case-lbl {
-            font-family:var(--font-en); font-size:.62rem;
-            font-weight:700; letter-spacing:.3em; text-transform:uppercase;
-            color:var(--gold); margin-bottom:.8rem;
-        }
-        .case-name {
-            font-family:var(--font-en);
-            font-size:clamp(1.6rem,3vw,2.6rem);
-            font-weight:800; letter-spacing:-.025em;
-            color:var(--white); margin-bottom:1.4rem;
-        }
-        .case-desc { font-size:.9rem; color:var(--gray-400); line-height:1.8; margin-bottom:1.8rem; }
-        .case-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
-        .chip {
-            font-family:var(--font-en); font-size:.62rem;
-            font-weight:600; letter-spacing:.1em; text-transform:uppercase;
-            color:var(--gold); background:rgba(197,160,89,.07);
-            border:1px solid rgba(197,160,89,.16);
-            padding:.28rem .85rem; border-radius:2px;
-        }
-
-        .ps-list { display:flex; flex-direction:column; gap:2rem; }
-        .ps {
-            padding-left:1.2rem;
-            border-left:1px solid rgba(197,160,89,.18);
-        }
-        .ps-lbl {
-            font-family:var(--font-en); font-size:.6rem;
-            font-weight:700; letter-spacing:.25em;
-            text-transform:uppercase; margin-bottom:.45rem;
-        }
-        .ps-lbl.p { color:#e05c5c; }
-        .ps-lbl.s { color:var(--gold); }
-        .ps-txt { font-size:.88rem; color:var(--gray-400); line-height:1.75; }
-
-        /* ─────────────────────────────────
            ENGINEERING EDGE
         ──────────────────────────────── */
         #edge { background:var(--obsidian); }
@@ -689,14 +610,10 @@
             .nav-links { display:none; }
             .hamburger { display:flex; }
             .exp-grid { grid-template-columns:1fr; gap:1px; }
-            .case { grid-template-columns:1fr; }
-            .case-l, .case-r { padding:2.5rem; border-left:none; }
-            .case-r { border-top:1px solid rgba(197,160,89,.08); }
             .hero-stats { position:relative; bottom:auto; margin-top:3.5rem; gap:2.5rem; }
             .cursor, .cursor-ring { display:none; }
             body { cursor:auto; }
             .ct-links { flex-direction:column; align-items:center; }
-            .work-head { flex-direction:column; }
         }
         @media (max-width:480px){
             .hero-name { font-size:clamp(2.8rem,13vw,4.5rem); }
@@ -726,7 +643,6 @@
 
     <div class="mobile-menu" id="mob">
         <a href="#expertise" class="mm-link">Expertise</a>
-        <a href="#work"      class="mm-link">Work</a>
         <a href="#edge"      class="mm-link">Philosophy</a>
         <a href="#contact"   class="mm-link">Contact</a>
     </div>
@@ -739,8 +655,8 @@
 
     <div class="hero-content">
         <div class="hero-eyebrow">
-            <div class="dot"></div>
-            Available for High-Impact Projects & Technical Consulting
+            <div class=""></div>
+            Currently open for new Technical Opportunities
         </div>
 
         <h1 class="hero-name">
@@ -749,7 +665,7 @@
         </h1>
 
         <p class="hero-role">
-            <strong>Full Stack Engineer</strong> & Technical Problem Solver
+            <strong>Full Stack Engineer</strong> — Specializing in High-Performance CMS & Aesthetic Digital Experiences
         </p>
 
         <p class="hero-desc">
@@ -917,23 +833,14 @@
             <a href="https://github.com/mohamedelglaly" target="_blank" rel="noopener" class="ct-link">
                 <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="https://wa.me/" target="_blank" rel="noopener" class="ct-link">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="f-logo">MOHAMED EL-GLALY<em>.</em></div>
-    <div class="f-copy">© 2025 · Full Stack Engineer &amp; Technical Problem Solver · Egypt</div>
+    <div class="f-copy">© 2025 · Full Stack Engineer &amp; Software Architect · Egypt</div>
 </footer>
-
-    <!-- ── FOOTER ── -->
-    <footer>
-        <div class="f-logo">MOHAMED EL-GLALY<em>.</em></div>
-        <div class="f-copy">© 2025 · Full Stack Engineer &amp; Software Architect · Egypt</div>
-    </footer>
 
     <!-- ══ SCRIPTS ══ -->
     <script>
