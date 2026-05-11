@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,7 +118,7 @@
         }
         .nav-links a::after {
             content:''; position:absolute;
-            bottom:-4px; right:0; width:0; height:1px;
+            bottom:-4px; left:0; width:0; height:1px;
             background: var(--gold); transition: var(--tr);
         }
         .nav-links a:hover, .nav-links a.active { color: var(--gold); }
@@ -285,11 +285,11 @@
             transition: box-shadow .3s, background .3s;
         }
         .btn-gold::after {
-            content:''; position:absolute; top:0; right:-100%; width:100%; height:100%;
+            content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
             background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
-            transition:right .55s;
+            transition:left .55s;
         }
-        .btn-gold:hover::after { right:100%; }
+        .btn-gold:hover::after { left:100%; }
         .btn-gold:hover { background:var(--gold-light); box-shadow:0 0 34px rgba(197,160,89,.32); }
 
         .btn-ghost {
@@ -302,7 +302,7 @@
         }
         .btn-ghost i { font-size:.85rem; transition:transform .3s; }
         .btn-ghost:hover { color:var(--gold); }
-        .btn-ghost:hover i { transform:translateX(-5px); }
+        .btn-ghost:hover i { transform:translateX(5px); }
 
         /* stats row */
         .hero-stats {
@@ -383,15 +383,15 @@
             content:''; position:absolute;
             top:0; left:0; right:0; height:1px;
             background:var(--gold);
-            transform:scaleX(0); transform-origin:right;
+            transform:scaleX(0); transform-origin:left;
             transition:transform .5s var(--ease);
         }
-        .exp-card:hover::before { transform:scaleX(1); transform-origin:left; }
+        .exp-card:hover::before { transform:scaleX(1); transform-origin:right; }
         .exp-card:hover { background:var(--obsidian-3); }
 
         /* subtle bg number */
         .ec-num {
-            position:absolute; bottom:1.5rem; left:2rem;
+            position:absolute; bottom:1.5rem; right:2rem;
             font-family:var(--font-en); font-size:5rem;
             font-weight:900; font-style:italic;
             color:rgba(197,160,89,.04); line-height:1;
@@ -455,7 +455,7 @@
         /* animated gold side stripe */
         .case::after {
             content:''; position:absolute;
-            top:0; right:0; width:2px; height:0;
+            top:0; left:0; width:2px; height:0;
             background:var(--gold); transition:height .6s var(--ease);
         }
         .case:hover::after { height:100%; }
@@ -464,7 +464,7 @@
         .case-r {
             padding:4rem;
             background:var(--obsidian-3);
-            border-right:1px solid rgba(197,160,89,.08);
+            border-left:1px solid rgba(197,160,89,.08);
             display:flex; flex-direction:column; justify-content:center;
         }
         .case-big-num {
@@ -496,8 +496,8 @@
 
         .ps-list { display:flex; flex-direction:column; gap:2rem; }
         .ps {
-            padding-right:1.2rem;
-            border-right:1px solid rgba(197,160,89,.18);
+            padding-left:1.2rem;
+            border-left:1px solid rgba(197,160,89,.18);
         }
         .ps-lbl {
             font-family:var(--font-en); font-size:.6rem;
@@ -537,7 +537,7 @@
         .tdot:nth-child(3){ background:#28c840; }
         .term-title {
             font-family:var(--font-en); font-size:.68rem;
-            color:var(--gray-600); margin-right:auto; letter-spacing:.08em;
+            color:var(--gray-600); margin-left:auto; letter-spacing:.08em;
         }
         .term-body {
             padding:1.4rem 1.6rem;
@@ -547,14 +547,14 @@
         .tl { display:flex; gap:.6rem; align-items:baseline; }
         .pr  { color:var(--gold); }
         .cm  { color:#7ec8e3; }
-        .out { color:#888; padding-right:.5rem; }
+        .out { color:#888; padding-left:.5rem; }
         .val { color:#9ab870; }
         .cmt { color:#444; font-style:italic; }
         .tcursor {
             display:inline-block; width:7px; height:13px;
             background:var(--gold);
             animation:blink 1.1s step-end infinite;
-            vertical-align:middle; margin-right:2px;
+            vertical-align:middle; margin-left:2px;
         }
 
         /* Pillars */
@@ -690,7 +690,7 @@
             .hamburger { display:flex; }
             .exp-grid { grid-template-columns:1fr; gap:1px; }
             .case { grid-template-columns:1fr; }
-            .case-l, .case-r { padding:2.5rem; border-right:none; }
+            .case-l, .case-r { padding:2.5rem; border-left:none; }
             .case-r { border-top:1px solid rgba(197,160,89,.08); }
             .hero-stats { position:relative; bottom:auto; margin-top:3.5rem; gap:2.5rem; }
             .cursor, .cursor-ring { display:none; }
@@ -713,10 +713,9 @@
 
     <!-- NAV -->
     <nav id="nav">
-        <a href="#hero" class="nav-logo">MEG<em>.</em></a>
+        <a href="#hero" class="nav-logo">GeoJelly<em>.</em></a>
         <ul class="nav-links">
             <li><a href="#expertise" class="nl">Expertise</a></li>
-            <li><a href="#work"      class="nl">Work</a></li>
             <li><a href="#edge"      class="nl">Philosophy</a></li>
             <li><a href="#contact"   class="nl nav-cta">Let's Talk</a></li>
         </ul>
@@ -734,340 +733,201 @@
 
     <!-- ── HERO ── -->
     <section id="hero">
-        <div class="hero-grid"></div>
-        <div class="hero-glow"></div>
-        <div class="hero-accent-line"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-accent-line"></div>
 
-        <div class="hero-content">
-            <div class="hero-eyebrow">
-                <div class="dot"></div>
-                Available for New Projects &amp; Consulting
-            </div>
-
-            <h1 class="hero-name">
-                <span class="line-outline">Mohamed</span>
-                <span class="line-solid">El-Glaly</span>
-            </h1>
-
-            <p class="hero-role">
-                <strong>Full Stack Engineer</strong> &amp; Software Architect
-            </p>
-
-            <p class="hero-desc">
-                أبني منظومات رقمية متكاملة — من بنية الخادم حتى واجهة المستخدم.
-                معمارية نظيفة، أمان محكم، وأداء استثنائي لا تحدّه الأدوات.
-            </p>
-
-            <div class="hero-btns">
-                <a href="#contact" class="btn-gold">Discuss a Project</a>
-                <a href="#work"    class="btn-ghost">
-                    <span>View Work</span>
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-n" data-target="8"><span class="cnt">8</span><em>+</em></div>
-                    <div class="stat-l">Years Experience</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-n" data-target="50"><span class="cnt">50</span><em>+</em></div>
-                    <div class="stat-l">Projects Delivered</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-n" data-target="100"><span class="cnt">100</span><em>%</em></div>
-                    <div class="stat-l">Custom Solutions</div>
-                </div>
-            </div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">
+            <div class="dot"></div>
+            Available for High-Impact Projects & Technical Consulting
         </div>
 
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span class="scroll-txt">Scroll</span>
-        </div>
-    </section>
+        <h1 class="hero-name">
+            <span class="line-outline">Mohamed</span>
+            <span class="line-solid">El-Glaly</span>
+        </h1>
 
-    <!-- ── MARQUEE ── -->
-    <div class="marquee-wrap">
-        <div class="marquee-track" id="mq">
-            <span class="m-item">PHP / Custom Development  <span class="m-sep">◆</span></span>
-            <span class="m-item">System Architecture        <span class="m-sep">◆</span></span>
-            <span class="m-item">Linux Server Management   <span class="m-sep">◆</span></span>
-            <span class="m-item">Database Engineering       <span class="m-sep">◆</span></span>
-            <span class="m-item">Performance Optimization   <span class="m-sep">◆</span></span>
-            <span class="m-item">API Integration            <span class="m-sep">◆</span></span>
-            <span class="m-item">Security Architecture      <span class="m-sep">◆</span></span>
-            <span class="m-item">CachyOS / Arch Linux       <span class="m-sep">◆</span></span>
-            <span class="m-item">Scalable Infrastructure    <span class="m-sep">◆</span></span>
-            <span class="m-item">JavaScript ES6+            <span class="m-sep">◆</span></span>
-            <!-- duplicate for loop -->
-            <span class="m-item">PHP / Custom Development  <span class="m-sep">◆</span></span>
-            <span class="m-item">System Architecture        <span class="m-sep">◆</span></span>
-            <span class="m-item">Linux Server Management   <span class="m-sep">◆</span></span>
-            <span class="m-item">Database Engineering       <span class="m-sep">◆</span></span>
-            <span class="m-item">Performance Optimization   <span class="m-sep">◆</span></span>
-            <span class="m-item">API Integration            <span class="m-sep">◆</span></span>
-            <span class="m-item">Security Architecture      <span class="m-sep">◆</span></span>
-            <span class="m-item">CachyOS / Arch Linux       <span class="m-sep">◆</span></span>
-            <span class="m-item">Scalable Infrastructure    <span class="m-sep">◆</span></span>
-            <span class="m-item">JavaScript ES6+            <span class="m-sep">◆</span></span>
+        <p class="hero-role">
+            <strong>Full Stack Engineer</strong> & Technical Problem Solver
+        </p>
+
+        <p class="hero-desc">
+            Bridging the gap between robust backend logic and seamless frontend experiences. 
+            I engineer performant digital ecosystems designed to solve real-world technical friction.
+        </p>
+
+        <div class="hero-btns">
+            <a href="#contact" class="btn-gold">Discuss a Project</a>
+            <a href="#expertise" class="btn-ghost">
+                <span>View Expertise</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-n" data-target="8"><span class="cnt">8</span><em>+</em></div>
+                <div class="stat-l">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-n" data-target="50"><span class="cnt">50</span><em>+</em></div>
+                <div class="stat-l">Complex Solutions</div>
+            </div>
+            <div class="stat">
+                <div class="stat-n" data-target="100"><span class="cnt">100</span><em>%</em></div>
+                <div class="stat-l">Performance Driven</div>
+            </div>
         </div>
     </div>
 
-    <!-- ── EXPERTISE ── -->
-    <section id="expertise">
-        <div class="exp-intro">
-            <div class="sec-label reveal">Core Engineering Domains</div>
-            <h2 class="sec-title reveal d1">خبرة تقنية<br>على أعلى مستوى</h2>
-            <p class="sec-sub reveal d2">
-                لا أبني مجرد مواقع — أصمم أنظمة متكاملة تجمع بين البنية السليمة،
-                الأداء العالي، والأمان الذي لا يُساوم عليه.
-            </p>
-        </div>
+    <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span class="scroll-txt">Scroll</span>
+    </div>
+</section>
 
-        <div class="exp-grid">
+<div class="marquee-wrap">
+    <div class="marquee-track" id="mq">
+        <span class="m-item">Full-Stack Development <span class="m-sep">◆</span></span>
+        <span class="m-item">Performance Optimization <span class="m-sep">◆</span></span>
+        <span class="m-item">Custom CMS Solutions <span class="m-sep">◆</span></span>
+        <span class="m-item">Advanced UI/UX Engineering <span class="m-sep">◆</span></span>
+        <span class="m-item">Technical Audits <span class="m-sep">◆</span></span>
+        <span class="m-item">CachyOS / Linux Systems <span class="m-sep">◆</span></span>
+        <span class="m-item">Scalable Architecture <span class="m-sep">◆</span></span>
+        <span class="m-item">API & System Integration <span class="m-sep">◆</span></span>
+    </div>
+</div>
 
-            <div class="exp-card reveal">
-                <div class="ec-num">01</div>
-                <div class="ec-icon"><i class="fas fa-server"></i></div>
-                <h3 class="ec-title">Systems &amp; Infrastructure</h3>
-                <p class="ec-desc">إدارة وتحسين بيئات Linux للإنتاج. ضبط الخوادم، تأمينها، وتحقيق أعلى معدلات أداء بموارد أقل. بيئة تطوير قائمة على CachyOS للحصول على أقصى سرعة ممكنة.</p>
-                <div class="ec-tags">
-                    <span class="tag">Linux</span><span class="tag">CachyOS</span>
-                    <span class="tag">Nginx</span><span class="tag">Apache</span>
-                    <span class="tag">Server Hardening</span><span class="tag">Caching</span>
-                </div>
-            </div>
+<section id="expertise">
+    <div class="exp-intro">
+        <div class="sec-label reveal">Technical Expertise</div>
+        <h2 class="sec-title reveal d1">High-Level Engineering<br>Tailored to Your Needs</h2>
+        <p class="sec-sub reveal d2">
+            I specialize in the synergy between aesthetics and performance. 
+            Providing technical solutions that are not just functional, but optimized for growth.
+        </p>
+    </div>
 
-            <div class="exp-card reveal d1">
-                <div class="ec-num">02</div>
-                <div class="ec-icon"><i class="fas fa-code"></i></div>
-                <h3 class="ec-title">Custom Development</h3>
-                <p class="ec-desc">بناء تطبيقات ويب مخصصة من الصفر بدون قيود. PHP متقدم، JavaScript حديث، وبنية كود نظيفة معيارية تضمن سهولة الصيانة وسرعة التطوير.</p>
-                <div class="ec-tags">
-                    <span class="tag">PHP 8+</span><span class="tag">Vanilla JS</span>
-                    <span class="tag">ES6+</span><span class="tag">OOP</span>
-                    <span class="tag">Clean Code</span><span class="tag">REST APIs</span>
-                </div>
-            </div>
-
-            <div class="exp-card reveal d2">
-                <div class="ec-num">03</div>
-                <div class="ec-icon"><i class="fas fa-sitemap"></i></div>
-                <h3 class="ec-title">Digital Architecture</h3>
-                <p class="ec-desc">تصميم قواعد بيانات قابلة للتوسع، هيكلة التكاملات، وبناء منظومات رقمية متكاملة تنمو مع عملك دون ديون تقنية تثقل المستقبل.</p>
-                <div class="ec-tags">
-                    <span class="tag">MySQL</span><span class="tag">Schema Design</span>
-                    <span class="tag">API Architecture</span><span class="tag">Integrations</span>
-                    <span class="tag">Scalability</span>
-                </div>
-            </div>
-
-            <div class="exp-card reveal d1">
-                <div class="ec-num">04</div>
-                <div class="ec-icon"><i class="fas fa-shield-halved"></i></div>
-                <h3 class="ec-title">Security Engineering</h3>
-                <p class="ec-desc">تأمين الأنظمة من الهجمات الشائعة وغير الشائعة. مراجعة أمنية للكود، تصلب الخوادم، وبناء دفاع متعمق يحمي بيانات عملائك.</p>
-                <div class="ec-tags">
-                    <span class="tag">OWASP</span><span class="tag">Firewall</span>
-                    <span class="tag">SSL/TLS</span><span class="tag">Code Auditing</span>
-                    <span class="tag">Hardening</span>
-                </div>
-            </div>
-
-            <div class="exp-card reveal d2">
-                <div class="ec-num">05</div>
-                <div class="ec-icon"><i class="fas fa-gauge-high"></i></div>
-                <h3 class="ec-title">Performance Optimization</h3>
-                <p class="ec-desc">تحليل وإزالة عوائق الأداء. تحسين Core Web Vitals، استراتيجيات تخزين مؤقت متعددة الطبقات، وتحسين استعلامات قواعد البيانات.</p>
-                <div class="ec-tags">
-                    <span class="tag">Core Web Vitals</span><span class="tag">Multi-layer Cache</span>
-                    <span class="tag">DB Query Opt.</span><span class="tag">CDN</span>
-                    <span class="tag">Lazy Loading</span>
-                </div>
-            </div>
-
-            <div class="exp-card reveal d3">
-                <div class="ec-num">06</div>
-                <div class="ec-icon"><i class="fas fa-puzzle-piece"></i></div>
-                <h3 class="ec-title">Platform Engineering</h3>
-                <p class="ec-desc">تطوير إضافات وتخصيصات معقدة على أشهر المنصات. ليس فقط استخدام الأدوات بل تطويعها وتوسيعها لتلبية أي متطلب غير اعتيادي.</p>
-                <div class="ec-tags">
-                    <span class="tag">WordPress</span><span class="tag">WooCommerce</span>
-                    <span class="tag">Plugin Dev</span><span class="tag">Custom Hooks</span>
-                    <span class="tag">Headless CMS</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ── CASE STUDIES ── -->
-    <section id="work">
-        <div class="work-head">
-            <div>
-                <div class="sec-label reveal">Featured Work</div>
-                <h2 class="sec-title reveal d1">مشاريع حقيقية<br>مشاكل محلولة</h2>
-            </div>
-            <p class="sec-sub reveal d2">
-                كل مشروع هو قصة تحدٍّ تقني تم تحديده، تحليله، وحله باتخاذ القرارات الصحيحة في الوقت الصحيح.
-            </p>
-        </div>
-
-        <div class="cases">
-
-            <div class="case reveal">
-                <div class="case-l">
-                    <div class="case-big-num">01</div>
-                    <div class="case-lbl">Complex Digital Infrastructure</div>
-                    <h3 class="case-name">CoolKW</h3>
-                    <p class="case-desc">منصة رقمية متكاملة تتطلب بنية تحتية متطورة لاستيعاب حجم عمليات ضخم وضمان استقرار تام على مدار الساعة.</p>
-                    <div class="case-chips">
-                        <span class="chip">Custom Architecture</span>
-                        <span class="chip">High Availability</span>
-                        <span class="chip">Performance Tuning</span>
-                        <span class="chip">Security Layer</span>
-                    </div>
-                </div>
-                <div class="case-r">
-                    <div class="ps-list">
-                        <div class="ps">
-                            <div class="ps-lbl p">⚠ The Challenge</div>
-                            <p class="ps-txt">بنية تقنية قائمة تعاني من عدم الاستقرار وبطء الأداء تحت الأحمال العالية، مع قواعد بيانات غير محسّنة وغياب أي استراتيجية للتخزين المؤقت.</p>
-                        </div>
-                        <div class="ps">
-                            <div class="ps-lbl s">✓ Engineering Solution</div>
-                            <p class="ps-txt">إعادة هيكلة كاملة للبنية التقنية: تحسين قاعدة البيانات، بناء طبقات تخزين مؤقت متعددة المستويات، وتأمين شامل ضد هجمات الحقن والاختراق. النتيجة: تحسين 300% في سرعة الاستجابة مع استقرار تام.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="case reveal">
-                <div class="case-l">
-                    <div class="case-big-num">02</div>
-                    <div class="case-lbl">Custom Marketplace Platform</div>
-                    <h3 class="case-name">TRJ Academy</h3>
-                    <p class="case-desc">منصة تعليمية متكاملة تجمع إدارة المحتوى، نظام الدفع، ولوحة تحكم متقدمة لآلاف الطلاب في نظام واحد متماسك.</p>
-                    <div class="case-chips">
-                        <span class="chip">LMS Architecture</span>
-                        <span class="chip">Payment Integration</span>
-                        <span class="chip">Custom Plugin Dev</span>
-                        <span class="chip">Scalable DB Design</span>
-                    </div>
-                </div>
-                <div class="case-r">
-                    <div class="ps-list">
-                        <div class="ps">
-                            <div class="ps-lbl p">⚠ The Challenge</div>
-                            <p class="ps-txt">الحاجة لمنصة تعليمية مخصصة تتجاوز قدرات الحلول الجاهزة، مع تكامل بوابات دفع متعددة ونظام صلاحيات دقيق متعدد المستويات.</p>
-                        </div>
-                        <div class="ps">
-                            <div class="ps-lbl s">✓ Engineering Solution</div>
-                            <p class="ps-txt">بناء نظام LMS مخصص بالكامل: تصميم قاعدة بيانات هرمية للمحتوى، تكامل آمن مع بوابات الدفع، ونظام صلاحيات دقيق مع لوحة إدارة متقدمة تُدار بمرونة تامة.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ── ENGINEERING EDGE ── -->
-    <section id="edge">
-        <div class="sec-label reveal">Engineering Philosophy</div>
-        <h2 class="sec-title reveal d1">The Engineering<br>Edge</h2>
-
-        <div class="edge-grid">
-
-            <!-- Terminal -->
-            <div class="reveal d1">
-                <div class="terminal">
-                    <div class="term-bar">
-                        <div class="tdot"></div>
-                        <div class="tdot"></div>
-                        <div class="tdot"></div>
-                        <span class="term-title">~/dev — CachyOS Terminal</span>
-                    </div>
-                    <div class="term-body">
-                        <div class="tl"><span class="pr">❯</span><span class="cm">neofetch --minimal</span></div>
-                        <div class="tl"><span class="out">  OS:</span><span style="color:#c5a059">CachyOS (Arch-based) x86_64</span></div>
-                        <div class="tl"><span class="out">  Kernel:</span><span class="val">linux-cachyos (perf-optimized)</span></div>
-                        <div class="tl"><span class="out">  Shell:</span><span style="color:#888">zsh + powerlevel10k</span></div>
-                        <div class="tl"><span class="out">  WM:</span><span style="color:#888">Hyprland</span></div>
-                        <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="cm">git log --oneline -4</span></div>
-                        <div class="tl"><span class="out">a3f8c1d</span><span class="val">refactor: modular auth service layer</span></div>
-                        <div class="tl"><span class="out">b29e4a2</span><span class="val">perf: db query optimization -42%</span></div>
-                        <div class="tl"><span class="out">c17f9d8</span><span class="val">feat: multi-layer caching system</span></div>
-                        <div class="tl"><span class="out">d04e7b1</span><span class="val">fix: harden server against XSS/CSRF</span></div>
-                        <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="tcursor"></span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pillars -->
-            <div class="pillars">
-                <div class="pillar reveal">
-                    <div class="p-icon"><i class="fas fa-cubes"></i></div>
-                    <div class="p-text">
-                        <h4>Clean Architecture First</h4>
-                        <p>كل سطر كود يتبع مبادئ SOLID. كود نظيف = صيانة أسهل، تطوير أسرع، وعمر أطول للمشروع بدون ديون تقنية.</p>
-                    </div>
-                </div>
-                <div class="pillar reveal d1">
-                    <div class="p-icon"><i class="fas fa-bolt"></i></div>
-                    <div class="p-text">
-                        <h4>Performance is Non-Negotiable</h4>
-                        <p>الأداء ليس ميزة إضافية — هو متطلب أساسي. أُحسّن كل طبقة من البنية لضمان تجربة مستخدم استثنائية في كل الأوقات.</p>
-                    </div>
-                </div>
-                <div class="pillar reveal d2">
-                    <div class="p-icon"><i class="fas fa-expand-arrows-alt"></i></div>
-                    <div class="p-text">
-                        <h4>Built for Scale from Day One</h4>
-                        <p>أصمم الأنظمة لتتحمل ١٠ أضعاف الحجم الحالي. قابلية التوسع قرار معماري مبكر، لا فكرة لاحقة.</p>
-                    </div>
-                </div>
-                <div class="pillar reveal d3">
-                    <div class="p-icon"><i class="fas fa-wrench"></i></div>
-                    <div class="p-text">
-                        <h4>Tech-Agnostic Thinking</h4>
-                        <p>أختار الأداة المناسبة للمشكلة، لا العكس. PHP، JS، Linux، أو أي stack آخر — الحل دائماً يسبق التقنية.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ── CONTACT ── -->
-    <section id="contact">
-        <div class="ct-glow"></div>
-        <div class="ct-inner">
-            <div class="sec-label reveal" style="justify-content:center; margin-bottom:2rem;">Start a Conversation</div>
-            <h2 class="sec-title reveal d1" style="margin-bottom:1.2rem; font-size:clamp(2rem,5vw,4rem);">
-                لديك تحدٍّ تقني يستحق<br>بنية حقيقية؟
-            </h2>
-            <p class="ct-tagline reveal d2">
-                تحدث معي عن مشروعك — سواء كان بناءً من الصفر، إنقاذ نظام قائم، أو تحسيناً جذرياً للأداء والأمان.
-            </p>
-            <div class="reveal d2">
-                <a href="mailto:m.elglaly@gmail.com" class="ct-email">m.elglaly@gmail.com</a>
-            </div>
-            <div class="ct-links reveal d3">
-                <a href="https://www.linkedin.com/in/mohamed-elglaly/" target="_blank" rel="noopener" class="ct-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/mohamedelglaly" target="_blank" rel="noopener" class="ct-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://wa.me/" target="_blank" rel="noopener" class="ct-link">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
+    <div class="exp-grid">
+        <div class="exp-card reveal">
+            <div class="ec-num">01</div>
+            <div class="ec-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="ec-title">UI/UX Engineering</h3>
+            <p class="ec-desc">Building responsive, high-speed interfaces that don't compromise on beauty. Deep focus on Core Web Vitals and intuitive user journeys using modern JS and optimized CSS.</p>
+            <div class="ec-tags">
+                <span class="tag">Vanilla JS</span><span class="tag">ES6+</span>
+                <span class="tag">Performance CSS</span><span class="tag">Responsive Design</span>
             </div>
         </div>
-    </section>
+
+        <div class="exp-card reveal d1">
+            <div class="ec-num">02</div>
+            <div class="ec-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h3 class="ec-title">Custom CMS Architecture</h3>
+            <p class="ec-desc">Bending platforms like WordPress to meet complex needs. Developing custom plugins, hooks, and advanced meta structures where standard tools fall short.</p>
+            <div class="ec-tags">
+                <span class="tag">PHP 8+</span><span class="tag">Plugin Dev</span>
+                <span class="tag">WP Engine</span><span class="tag">Custom APIs</span>
+            </div>
+        </div>
+
+        <div class="exp-card reveal d2">
+            <div class="ec-num">03</div>
+            <div class="ec-icon"><i class="fas fa-gauge-high"></i></div>
+            <h3 class="ec-title">Performance Recovery</h3>
+            <p class="ec-desc">Identifying and fixing technical debt. I audit existing platforms to eliminate bottlenecks, optimize databases, and drastically reduce load times.</p>
+            <div class="ec-tags">
+                <span class="tag">Technical Audits</span><span class="tag">DB Optimization</span>
+                <span class="tag">Caching Layers</span><span class="tag">Query Tuning</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="edge">
+    <div class="sec-label reveal">Engineering Philosophy</div>
+    <h2 class="sec-title reveal d1">My Technical<br>Edge</h2>
+
+    <div class="edge-grid">
+        <div class="reveal d1">
+            <div class="terminal">
+                <div class="term-bar">
+                    <div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>
+                    <span class="term-title">~/dev — CachyOS Environment</span>
+                </div>
+                <div class="term-body">
+                    <div class="tl"><span class="pr">❯</span><span class="cm">neofetch --minimal</span></div>
+                    <div class="tl"><span class="out">  OS:</span><span style="color:#c5a059">CachyOS (Arch-based) - Optimized for Performance</span></div>
+                    <div class="tl"><span class="out">  Shell:</span><span style="color:#888">zsh / dev-ready</span></div>
+                    <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="cm">grep "philosophy" dev_manifest.json</span></div>
+                    <div class="tl"><span class="out">"Performance":</span><span class="val">"Non-negotiable foundation"</span></div>
+                    <div class="tl"><span class="out">"Architecture":</span><span class="val">"Clean, Modular, Scalable"</span></div>
+                    <div class="tl"><span class="out">"UI/UX":</span><span class="val">"Elegant but Engineering-Driven"</span></div>
+                    <div class="tl" style="margin-top:.5rem"><span class="pr">❯</span><span class="tcursor"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pillars">
+            <div class="pillar reveal">
+                <div class="p-icon"><i class="fas fa-bolt"></i></div>
+                <div class="p-text">
+                    <h4>Performance is the Standard</h4>
+                    <p>I build with a "milliseconds matter" mindset. Whether it's server response or browser rendering, optimization is baked into every line of code.</p>
+                </div>
+            </div>
+            <div class="pillar reveal d1">
+                <div class="p-icon"><i class="fas fa-cubes"></i></div>
+                <div class="p-text">
+                    <h4>Custom-First Solutions</h4>
+                    <p>I don't just "use" tools; I extend them. I create bespoke plugins and custom logic layers that ensure the technology fits your business, not the other way around.</p>
+                </div>
+            </div>
+            <div class="pillar reveal d2">
+                <div class="p-icon"><i class="fas fa-wrench"></i></div>
+                <div class="p-text">
+                    <h4>Tech-Agnostic Problem Solving</h4>
+                    <p>My stack is chosen based on the problem. I combine technical depth in PHP and JS with a sys-admin approach to servers to deliver truly integrated solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="ct-glow"></div>
+    <div class="ct-inner">
+        <div class="sec-label reveal" style="justify-content:center; margin-bottom:2rem;">Start a Conversation</div>
+        <h2 class="sec-title reveal d1" style="margin-bottom:1.2rem; font-size:clamp(2rem,5vw,4rem);">
+            Have a Technical Challenge<br>That Needs a Solution?
+        </h2>
+        <p class="ct-tagline reveal d2">
+            Whether you're building from scratch, scaling an existing platform, 
+            or need a technical audit to fix performance issues — let's build something solid.
+        </p>
+        <div class="reveal d2">
+            <a href="mailto:elglaly242@gmail.com" class="ct-email">Elglaly242@Gmail.com</a>
+        </div>
+        <div class="ct-links reveal d3">
+            <a href="https://www.linkedin.com/in/mohamed-elglaly/" target="_blank" rel="noopener" class="ct-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/mohamedelglaly" target="_blank" rel="noopener" class="ct-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noopener" class="ct-link">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="f-logo">MOHAMED EL-GLALY<em>.</em></div>
+    <div class="f-copy">© 2025 · Full Stack Engineer &amp; Technical Problem Solver · Egypt</div>
+</footer>
 
     <!-- ── FOOTER ── -->
     <footer>
